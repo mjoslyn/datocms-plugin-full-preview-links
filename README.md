@@ -1,6 +1,6 @@
-# Datocms Plugin Full Preview Link DatoCMS plugin
+# Datocms Plugin Full Preview Links
 
-A simple plugin that displays a full preview link
+A simple plugin that displays full preview links in the sidebar
 
 ## Configuration
 
