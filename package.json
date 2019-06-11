@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-full-preview-links",
   "homepage": "https://github.com/FoxyGirl/datocms-plugin-full-preview-links",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A simple plugin that displays full preview links in the sidebar",
   "main": "index.js",
   "scripts": {
