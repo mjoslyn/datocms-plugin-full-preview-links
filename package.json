@@ -17,7 +17,8 @@
     "datocms",
     "datocms-plugin",
     "sidebar",
-    "json-field"
+    "json-field",
+    "preview-links"
   ],
   "files": [
     "dist",
