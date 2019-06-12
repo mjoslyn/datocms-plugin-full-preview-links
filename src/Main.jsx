@@ -6,6 +6,11 @@ import './style.sass'
 
 const capitalizeFirstLetter = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
+const checkEndOfUrl = url => {
+  const trimedUrl = url.trim()
+  return trimedUrl.charAt(trimedUrl.length - 1) === '/' ? trimedUrl : `${trimedUrl}/`
+}
+
 @connectToDatoCms(plugin => ({
   developmentMode: plugin.parameters.global.developmentMode,
   fieldValue: plugin.getFieldValue(plugin.fieldPath),
@@ -47,8 +52,8 @@ export default class Main extends Component {
       slug,
       locale,
       modelName,
-      urlPrefix: urlPrefix.trim(),
-      developUrlPrefix: developUrlPrefix.trim(),
+      urlPrefix: checkEndOfUrl(urlPrefix),
+      developUrlPrefix: checkEndOfUrl(developUrlPrefix),
     })
   }
 
@@ -100,7 +105,7 @@ export default class Main extends Component {
           <>
             <div className="link-wrap">
               <a href={fullDevelopLink} title={slug} target="_blank" rel="noopener noreferrer" className="preview-link">
-                Preview develop link
+                Develop preview link
               </a>
               <button type="button" onClick={this.handleClick('develop')}>
                 {`${isVisibleDevelopFullLink ? 'Hide' : 'Show'} full link`}
