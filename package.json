@@ -1,12 +1,12 @@
 {
   "name": "datocms-plugin-full-preview-links",
   "homepage": "https://github.com/FoxyGirl/datocms-plugin-full-preview-links",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A simple plugin that displays full preview links in the sidebar",
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"yarn dev\" \"yarn localtunnel\"",
-    "localtunnel": "lt -s datocms-plugin-full-preview-link --port 5000",
+    "localtunnel": "lt -s datocms-plugin-full-preview-links --port 5000",
     "dev": "NODE_ENV=development webpack-dev-server --port 5000",
     "dist": "NODE_ENV=production webpack --progress",
     "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",

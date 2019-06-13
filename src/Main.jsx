@@ -7,6 +7,7 @@ import './style.sass'
 const capitalizeFirstLetter = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
 
 const checkEndOfUrl = url => {
+  if (url === '') return url
   const trimedUrl = url.trim()
   return trimedUrl.charAt(trimedUrl.length - 1) === '/' ? trimedUrl : `${trimedUrl}/`
 }

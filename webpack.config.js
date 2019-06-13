@@ -1,20 +1,20 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin')
 
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV === 'production'
 
 module.exports = {
   entry: __dirname + '/src/index.jsx',
   mode: process.env.NODE_ENV,
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   devtool: 'source-map',
   devServer: {
     contentBase: './',
     disableHostCheck: true,
-    public: 'https://datocms-plugin-datocms-plugin-full-preview-link.localtunnel.me',
+    public: 'https://datocms-plugin-full-preview-links.localtunnel.me',
   },
   module: {
     rules: [
@@ -27,21 +27,18 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        use: { loader: 'babel-loader' } },
+        use: { loader: 'babel-loader' },
+      },
       {
         test: /\.sass$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader"
-        ]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.svg/,
         use: {
           loader: 'svg-url-loader',
-          options: {}
-        }
+          options: {},
+        },
       },
     ],
   },
@@ -59,7 +56,7 @@ module.exports = {
       assets: [
         'https://unpkg.com/datocms-plugins-sdk@0.0.6/dist/sdk.js',
         'https://unpkg.com/datocms-plugins-sdk@0.0.6/dist/sdk.css',
-      ]
+      ],
     }),
   ].filter(Boolean),
 }
