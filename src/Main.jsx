@@ -91,7 +91,7 @@ export default class Main extends Component {
           <>
             <div className="link-wrap">
               <a href={fullLink} title={slug} target="_blank" rel="noopener noreferrer" className="preview-link">
-                Preview link
+                Link on prod
               </a>
               <button type="button" onClick={this.handleClick()}>
                 {`${isVisibleFullLink ? 'Hide' : 'Show'} full link`}
@@ -105,7 +105,7 @@ export default class Main extends Component {
           <>
             <div className="link-wrap">
               <a href={fullDevelopLink} title={slug} target="_blank" rel="noopener noreferrer" className="preview-link">
-                Develop preview link
+                Link on test server
               </a>
               <button type="button" onClick={this.handleClick('develop')}>
                 {`${isVisibleDevelopFullLink ? 'Hide' : 'Show'} full link`}
