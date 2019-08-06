@@ -26,6 +26,7 @@ export default class Main extends Component {
     locale: '',
     urlPrefix: '',
     developUrlPrefix: '',
+    modelAlias: '',
     modelName: '',
     isVisibleFullLink: false,
     isVisibleDevelopFullLink: false,
@@ -37,7 +38,7 @@ export default class Main extends Component {
     const {
       locale,
       parameters: {
-        instance: { urlPrefix, developUrlPrefix },
+        instance: { urlPrefix, developUrlPrefix, modelAlias },
       },
       itemType: {
         attributes: { api_key: modelName },
@@ -55,6 +56,7 @@ export default class Main extends Component {
       modelName,
       urlPrefix: checkEndOfUrl(urlPrefix),
       developUrlPrefix: checkEndOfUrl(developUrlPrefix),
+      modelAlias: modelAlias.trim(),
     })
   }
 
@@ -72,19 +74,19 @@ export default class Main extends Component {
   }
 
   render() {
-    // const { plugin } = this.props
     const {
       slug,
       locale,
       urlPrefix,
       developUrlPrefix,
+      modelAlias,
       modelName,
       isVisibleFullLink,
       isVisibleDevelopFullLink,
     } = this.state
 
-    const fullLink = `${urlPrefix}${locale}/${modelName}/${slug}`
-    const fullDevelopLink = `${developUrlPrefix}${locale}/${modelName}/${slug}`
+    const fullLink = `${urlPrefix}${locale}/${modelAlias || modelName}/${slug}`
+    const fullDevelopLink = `${developUrlPrefix}${locale}/${modelAlias || modelName}/${slug}`
 
     return (
       <div className="container">

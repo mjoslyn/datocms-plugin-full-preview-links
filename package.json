@@ -1,7 +1,7 @@
 {
   "name": "datocms-plugin-full-preview-links",
   "homepage": "https://github.com/FoxyGirl/datocms-plugin-full-preview-links",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "description": "A simple plugin that displays full preview links in the sidebar",
   "main": "index.js",
   "scripts": {
@@ -51,6 +51,13 @@
           "type": "string",
           "required": false,
           "hint": "The URL prefix to use in a full preview link on develop site (i.e. <code>https://developsitename.com/</code>)"
+        },
+        {
+          "id": "modelAlias",
+          "label": "Alias for Model",
+          "type": "string",
+          "required": false,
+          "hint": "The Alias for Model to use in a full preview link instead of the Model ID (i.e. <code>model-alias</code>)"
         }
       ]
     }
