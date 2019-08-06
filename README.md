@@ -10,6 +10,7 @@ When applying this plugin to your field, please insert the following settings:
 
 1. URL prefix of your site is required.
 2. Develop URL prefix of your test develop site is optional.
+3. Alias for Model, which will be used instead of `Model ID` is optional.
 
 The full preview links are created from `[URL prefix][locale][Model ID][slug]`
 and look like **https://sitename.netlify.com/en/advice/first-advice**
