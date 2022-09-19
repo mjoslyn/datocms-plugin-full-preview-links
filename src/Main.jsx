@@ -85,8 +85,8 @@ export default class Main extends Component {
       isVisibleDevelopFullLink,
     } = this.state
 
-    const fullLink = `${urlPrefix}${locale}/${modelAlias || modelName}/${slug}`
-    const fullDevelopLink = `${developUrlPrefix}${locale}/${modelAlias || modelName}/${slug}`
+    const fullLink = `${urlPrefix}${modelAlias || modelName}/${slug}`
+    const fullDevelopLink = `${developUrlPrefix}${modelAlias || modelName}/${slug}`
 
     return (
       <div className="container">
